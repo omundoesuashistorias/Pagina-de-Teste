@@ -7,43 +7,61 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Cabeçalho */
 header {
   background-color: #333333;
   color: white;
   padding: 20px;
   text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 header h1 {
   margin-bottom: 10px;
+  font-size: 2em;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 15px;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  color: #ffcc00;
 }
 
+/* Conteúdo principal */
 main {
-  padding: 20px;
+  flex: 1;
+  padding: 40px 20px;
   text-align: center;
 }
 
+/* Rodapé */
 footer {
   background-color: #f1f1f1;
   text-align: center;
-  padding: 10px;
+  padding: 15px;
   font-size: 0.9em;
   color: #555;
-  margin-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
 }
